@@ -1,0 +1,20 @@
+<%= form_for(@friend, remote: true) do |f| %>
+
+    <div class="field">
+        <%= f.text_field :name, label: false, placeholder: "Name" %>
+    </div>
+
+
+    <div class="field">
+        <%= f.text_field :contact_number, label: false, placeholder: "Contact Number"%>
+    </div>
+
+    <div class="field">
+        <%= f.text_field :address, label: false, placeholder: "Address"%>
+    </div>
+
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+
+<% end %>

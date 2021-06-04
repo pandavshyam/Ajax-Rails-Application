@@ -1,0 +1,12 @@
+<%= div_for @friends do %>
+
+  <h3><%= friend.name %></h3>
+  <h3><%= friend.contact_number %></h3>
+  <h3><%= friend.address %></h3>
+
+  <ul>
+   <li><%= link_to "Edit friend", edit_friend_path(friend), remote: true %></li>
+   <li><%= link_to "Delete friend", friend, remote: true, method: :delete %></li>
+  </ul>
+</div>
+<% end %>

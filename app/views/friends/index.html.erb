@@ -1,0 +1,8 @@
+
+<div class="my-friends">
+    <% @friends.each do |friend| %>
+    <%= render friend %>
+    <% end %>
+</div>
+
+<%= link_to "New friend", new_friend_path, remote: true, class: "new-friend-button"%>
