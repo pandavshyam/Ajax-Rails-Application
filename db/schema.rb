@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210604190140) do
+ActiveRecord::Schema.define(version: 20210605094014) do
 
   create_table "friends", force: :cascade do |t|
     t.string   "name"
@@ -20,5 +20,15 @@ ActiveRecord::Schema.define(version: 20210604190140) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string   "task_name"
+    t.date     "task_date"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "priority_of_task"
+  end
+
+  add_index "tasks", ["task_name"], name: "index_tasks_on_task_name"
 
 end
